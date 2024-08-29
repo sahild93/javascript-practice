@@ -7,7 +7,16 @@
  * @example "abcdef" -> "ABCdef"
 */
 function problem(str) {
-    return null;
+    a = []
+    for (let i = 0; i<str.length; i++){
+        if (i < Math.floor(str.length / 2)){
+            a.push(str[i].toUpperCase());
+        }
+        else{
+            a.push(str[i].toLowerCase());
+        }
+    }
+    return a.join('');
 }
 
 const tests = [

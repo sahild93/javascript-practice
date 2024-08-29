@@ -8,7 +8,17 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let a = str.split('').filter(function(item) {
+        return item != ' ';
+    })
+    a = a.join('').toLowerCase().split('');
+    let b = a.toReversed()
+    for (let i=0;i<a.length;i++){
+        if (a[i] != b[i]){
+            return false;
+        }
+    }
+    return true;
 }
 
 const tests = [

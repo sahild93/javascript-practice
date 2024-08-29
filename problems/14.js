@@ -7,7 +7,18 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    let c =0;
+    for (let i=0;i<numbers.length;i++){
+        for (let j=0;j<numbers.length;j++){
+            if (numbers[i] == numbers[j]){
+                c++;
+            }
+        }
+        if (c >= numbers.length / 2){
+            return numbers[i]
+        }
+        c = 0;
+    }
 }
 
 const tests = [
